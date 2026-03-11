@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Bookworm.Console/Bookworm.Console.csproj" />
+  <Project Path="Bookworm.Domain/Bookworm.Domain.csproj" />
+  <Project Path="Bookworm.EFCore/Bookworm.EFCore.csproj" />
+</Solution>
