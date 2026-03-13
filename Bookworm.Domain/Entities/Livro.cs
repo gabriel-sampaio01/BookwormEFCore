@@ -1,0 +1,14 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Bookworm.Domain.Entities;
+
+public class Livro
+{
+    public int LivroId { get; set; }
+    public string Nome { get; set; }
+    public decimal Preco { get; set; }
+    public DateTime DtPublicacao { get; set; }
+    public int Estoque { get; set; }
+
+    public int EditoraId { get; set; }// Chave Estrangeira
+}

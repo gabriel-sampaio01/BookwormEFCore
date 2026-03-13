@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Bookworm.EFCore": {
+      "commandName": "Project"
+    },
+    "Perfil 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\Gabriel\\source\\repos\\Bookworm.Console\\Bookworm.Console\\Program.cs"
+    }
+  }
+}

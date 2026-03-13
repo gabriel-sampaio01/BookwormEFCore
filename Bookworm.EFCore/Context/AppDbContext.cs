@@ -1,8 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Bookworm.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 namespace Bookworm.EFCore.Context;
 
 public class AppDbContext : DbContext
 {
+    public DbSet<Livro> Livros { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(AppConfig.GetConnectionString());
@@ -10,6 +13,18 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Livro>(entity =>
+        {
+
+            entity.Property(n => n.Nome)
+                  .IsUnicode(false)
+                  .HasMaxLength(100)
+                  .IsRequired();
+
+            entity.Property(n => n.Preco)
+                  .IsRequired();
+
+        });
     }
 }

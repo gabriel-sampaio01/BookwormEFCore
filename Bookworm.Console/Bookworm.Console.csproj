@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bookworm.Domain\Bookworm.Domain.csproj" />
     <ProjectReference Include="..\Bookworm.EFCore\Bookworm.EFCore.csproj" />
   </ItemGroup>
 
