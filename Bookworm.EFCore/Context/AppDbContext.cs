@@ -5,6 +5,9 @@ namespace Bookworm.EFCore.Context;
 public class AppDbContext : DbContext
 {
     public DbSet<Livro> Livros { get; set; }
+    public DbSet<Autor> Autores { get; set; }
+    public DbSet<Editora> Editoras { get; set; }
+    public DbSet<Categoria> Categorias { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -19,7 +22,7 @@ public class AppDbContext : DbContext
 
             entity.Property(n => n.Nome)
                   .IsUnicode(false)
-                  .HasMaxLength(100)
+                  .HasMaxLength(250)
                   .IsRequired();
 
             entity.Property(n => n.Preco)
@@ -31,10 +34,8 @@ public class AppDbContext : DbContext
         {
             entity.Property(n => n.Nome)
                   .IsUnicode(false)
-                  .HasMaxLength(100)
+                  .HasMaxLength(150)
                   .IsRequired();
-
-
         });
     }
 }

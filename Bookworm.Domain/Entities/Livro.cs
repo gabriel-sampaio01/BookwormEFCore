@@ -13,4 +13,5 @@ public class Livro
     public int EditoraId { get; set; } // Chave Estrangeira
 
     public ICollection<Autor> Autores { get; set; } // Relacao N:N
+    public ICollection<Categoria> Categorias { get; set; } // N:N 
 }
