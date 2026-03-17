@@ -10,5 +10,7 @@ public class Livro
     public DateTime DtPublicacao { get; set; }
     public int Estoque { get; set; }
 
-    public int EditoraId { get; set; }// Chave Estrangeira
+    public int EditoraId { get; set; } // Chave Estrangeira
+
+    public ICollection<Autor> Autores { get; set; } // Relacao N:N
 }

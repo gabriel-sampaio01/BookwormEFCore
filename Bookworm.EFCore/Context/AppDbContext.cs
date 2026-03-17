@@ -26,5 +26,15 @@ public class AppDbContext : DbContext
                   .IsRequired();
 
         });
+
+        modelBuilder.Entity<Autor>(entity =>
+        {
+            entity.Property(n => n.Nome)
+                  .IsUnicode(false)
+                  .HasMaxLength(100)
+                  .IsRequired();
+
+
+        });
     }
 }
